@@ -1,0 +1,3 @@
+./list.sh
+./list_option.sh
+./test_command.sh

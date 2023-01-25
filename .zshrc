@@ -129,7 +129,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Aliases
-[ -f ~/.Dotfiles/aliases/list.sh ] && source ~/.Dotfiles/aliases/list.sh
+[ -f ~/.Dotfiles/init.sh] && source ~/.Dotfiles/init.sh
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
