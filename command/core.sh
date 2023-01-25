@@ -5,12 +5,21 @@
 #===================================================================================
 
 source aliases/test_command.sh
-valid_command
+check_plugins
 s=$?
-if [ $s -eq 0 ]
+if [ $s -eq 1 ]
 then
-    echo 'valid_command'
+    echo 'all plugins are available now'
 else
 
-    echo 'invalid_command'
+    echo 'some plugins are not available or missing plese following guidelines'
+fi
+
+list_files
+s=$?
+if [ $s -eq 1 ]
+then
+    echo "file is already there"
+else
+    echo "file is not there"
 fi

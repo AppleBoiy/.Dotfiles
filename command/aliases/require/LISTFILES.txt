@@ -1,3 +1,2 @@
-./list.sh
-./list_option.sh
-./test_command.sh
+aliases/list.sh
+Aliases/list_option.sh
