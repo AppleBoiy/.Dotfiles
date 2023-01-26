@@ -1,2 +1,0 @@
-aliases/list.sh
-Aliases/list_option.sh
