@@ -1,41 +1,25 @@
 #!/usr/bin/env bash
 
-echo "CORE COMMAND IS CALLED"
-
 #===================================================================================
-# Functions call
-#===================================================================================
-
+# Keep at the top of this file.
 # shellcheck source=/dev/null
-source "$ISRC/test_command.sh"
+echo "CORE is running now~"
+#===================================================================================
 
 
 #===================================================================================
-# Aliases
+# PATH variable
 #===================================================================================
 
-check_plugins
-PLUGINS=$?
-if [ $PLUGINS -eq 1 ]
-then
-    echo 'all plugins are available now'
-else
+# EXPORT PATH SHORTCUTS
+source "$HOME/.Dotfiles/lib/src/path/PATH.sh"
 
-    echo 'some plugins are not available or missing plese following guidelines'
-fi
+# EXPORT SHOW AVALIABLES PATH SHORTCUTS FUNCTION
+source "$ISRC/path/show_path.sh"
 
-list_files
-FILES=$?
-echo $FILES
-if [ $FILES -eq 1 ]
-then
-    echo "file is already there"
-else
-    echo "file is not there"
-fi
+#===================================================================================
+# ALIAS variable
+#===================================================================================
 
-if [ $PLUGINS -eq 1 ] && [ $FILES -eq 1 ]
-then
-    # shellcheck source=/dev/null
-    source "$ISRC/aliases/list.sh"
-fi
+# ALIAS COMMAND
+source "$ISRC/alias/init.sh"

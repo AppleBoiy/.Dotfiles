@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#===================================================================================
+# Keep at the top of this file.
+# shellcheck source=/dev/null
+echo "PATH is running now~"
+#===================================================================================
 
 #===================================================================================
 # EXPORT PATH
@@ -16,3 +21,5 @@ export ISRC="$LIBRARY_PATH/src"
 
 # Path to log files directory
 export LOG="$LIBRARY_PATH/var/log"
+
+
