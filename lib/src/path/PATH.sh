@@ -22,4 +22,5 @@ export ISRC="$LIBRARY_PATH/src"
 # Path to log files directory
 export LOG="$LIBRARY_PATH/var/log"
 
-
+# Requirement
+export REQUIREMENTS="$LIBRARY_PATH/var/require"

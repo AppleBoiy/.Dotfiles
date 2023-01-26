@@ -3,7 +3,7 @@
 #===================================================================================
 # Keep at the top of this file.
 # shellcheck source=/dev/null
-echo "CORE is running now~"
+echo "SOURCE is running now~"
 #===================================================================================
 
 
@@ -16,6 +16,12 @@ source "$HOME/.Dotfiles/lib/src/path/PATH.sh"
 
 # EXPORT SHOW AVALIABLES PATH SHORTCUTS FUNCTION
 source "$ISRC/path/show_path.sh"
+
+
+#===================================================================================
+## CHECKING REQUIREMENTS
+source "$ISRC/check/plugins.sh"
+check_plugins
 
 #===================================================================================
 # ALIAS variable
