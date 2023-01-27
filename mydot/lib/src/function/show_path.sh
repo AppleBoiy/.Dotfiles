@@ -12,7 +12,7 @@ function available_path() {
 
     for path_command in "${!paths[@]}"
     do
-        echo "$path_command is direct to path[$path_command]"
+        echo "$path_command is direct to ${paths[path_command]}"
     done
 }
 export available_path
