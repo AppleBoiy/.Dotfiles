@@ -8,10 +8,10 @@ function check_plugins () {
 
     declare -a missing_plugins
 
-    if [[ -f "$KEY/PLUGINS.txt" ]]; then
+    if [[ -f "$KEYS/PLUGINS.txt" ]]; then
         echo "DEBUG: Plugins list is available now..."
     else
-        echo "WARN: Plugins $KEY/PLUGINS.txt is not found" >> "$ERRLOG"
+        echo "WARN: Plugins $KEYS/PLUGINS.txt is not found " >> "$ERRLOG"
     fi
 
     while read -r line
@@ -24,7 +24,7 @@ function check_plugins () {
 
     # PATH to find the plugins list
     # PATH must be absolute path
-    done < "$KEY/PLUGINS.txt"
+    done < "$KEYS/PLUGINS.txt"
 
     echo "DEBUG: checking complete ~"
 

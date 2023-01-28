@@ -3,7 +3,7 @@
 #===================================================================================
 # Keep at the top of this file.
 # shellcheck source=/dev/null
-echo "ALIAS is running now~"
+echo "INFO: ALIAS is running now~"
 #===================================================================================
 
 # list file 

@@ -8,8 +8,5 @@ echo "CONTROLLER is running now~"
 #===================================================================================
 
 
-touch "${LOGFILE}"
-touch "${ERRLOG}"   
-
 source "$LOGGER_PATH/init.sh"
 

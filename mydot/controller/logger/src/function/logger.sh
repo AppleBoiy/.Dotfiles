@@ -11,7 +11,8 @@ echo "INFO: logger is running now~"
 # tail -f "${LOGFILE}" &
 # logging function - called task to make main section more readable...prepend it to commands, or group commands in a function and prepend the call.
 
-function task() {
+function write_task() {
+    echo "*DEBUG: task is running now in $PWD"
     echo "===================================================================================================="
     echo "$(date):$(printf ' %q' "$@")"
     echo "===================================================================================================="
@@ -27,16 +28,6 @@ function task() {
     echo ""
 } >> "${LOGFILE}"
 
-
-### Main exectuion
-
-function write_task() {
-
-
-
-
-    task "$1"
-}
 
 function err_task() { 
     
@@ -59,5 +50,7 @@ function err_task() {
    
 
 }
+
+echo "EXPORT LOGGER COMPLETE"
 
 export write_task

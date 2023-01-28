@@ -11,13 +11,13 @@ echo "PATH is running now~"
 #===================================================================================
 
 # Path to dotfiles directory
-export DOTS="$HOME/.Dotfiles"
+export DOTS="../$PWD"
 
 # CONTROLLER LIBRARY
-export CONTROLLER="$DOTS/mydot/controller"
+export CONTROLLER="$PWD/controller"
 
 # Path to dotfiles library directory
-export LIB="$HOME/.Dotfiles/lib"
+export LIB="$PWD/lib"
 
 # Path to my custom dotfiles library source code
 export ISRC="$LIB/src"
@@ -26,14 +26,14 @@ export ISRC="$LIB/src"
 export CACHE="$CONTROLLER/.cache"
 
 #===================================================================================
-# LIBRARY CONTROLLER
-export CORE="$CONTROLLER/core.sh"
+# LIBRARY CORE
+export CORE="$LIB/core/init.sh"
 #===================================================================================
 
 #===================================================================================
 # Requirement
 #===================================================================================
-export KEY="$LIB/var/key"
+export KEYS="$LIB/var/key"
 
 #===================================================================================
 # LOG files

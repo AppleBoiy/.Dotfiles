@@ -12,12 +12,12 @@ echo "INFO: SOURCE is running now~"
 #===================================================================================
 
 # EXPORT SHOW AVALIABLES PATH SHORTCUTS FUNCTION
-source "$ISRC/path/show_path.sh"
+source "$ISRC/function/show_path.sh"
 
 
 #===================================================================================
 ## CHECKING REQUIREMENTS
-source "$ISRC/check/plugins.sh"
+source "$ISRC/function/plugins.sh"
 check_plugins
 
 #===================================================================================
@@ -25,4 +25,4 @@ check_plugins
 #===================================================================================
 
 # ALIAS COMMAND
-source "$ISRC/alias/init.sh"
+source "$ISRC/command/init.sh"

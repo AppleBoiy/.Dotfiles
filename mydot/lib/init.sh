@@ -4,18 +4,13 @@
 #===================================================================================
 # Keep at the top of this file.
 # shellcheck source=/dev/null
-echo "DOT IS RUNNING NOW~~"
-source "${CORE}"
+echo "INFO: DOT IS RUNNING NOW~~"
 
-if [ -f "$LIB/core/init.sh" ]
+if [ -f "${CORE}" ]
 then
     echo "DEBUG: CORE is found"
     # shellcheck source=/dev/null
-    source "$LIB/core/init.sh"
+    source "${CORE}"
 else 
     echo "FETAL: CORE is not found in path" >> "$ERRLOG"
 fi
-
-#
-
-write_task "$LIB/core/init.sh"
