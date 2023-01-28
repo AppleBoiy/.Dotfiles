@@ -22,6 +22,7 @@ unset LOGGER_PATH
 unset available_path
 unset check_plugins
 unset write_task
+unset log_writter
 
 #===================================================================================
 echo "USET FINISHED"

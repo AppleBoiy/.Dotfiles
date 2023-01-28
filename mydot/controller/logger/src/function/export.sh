@@ -8,3 +8,4 @@
 export LOGGER_FUNC="$LOGGER_PATH/src/function"
 
 source "$LOGGER_FUNC/logger.sh"
+source "$LOGGER_FUNC/padding_format.sh"

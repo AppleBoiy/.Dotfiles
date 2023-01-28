@@ -4,13 +4,15 @@
 # Check this plugins are avaliable or not.
 #===================================================================================
 function check_plugins () {
-    echo "DEBUG: Checking plugins... at: $PWD"
+
+    log_writter "-d" "Checking plugins..." "plugins"
 
     declare -a missing_plugins
 
     if [[ -f "$KEYS/PLUGINS.txt" ]]; then
-        echo "DEBUG: Plugins list is available now..."
+        log_writter "-d" "plugins list is available now..." "plugins"
     else
+        log_writter "-w" "PLUGINS.txt is not found" "plugins"
         echo "WARN: Plugins $KEYS/PLUGINS.txt is not found " >> "$ERRLOG"
     fi
 
@@ -26,12 +28,15 @@ function check_plugins () {
     # PATH must be absolute path
     done < "$KEYS/PLUGINS.txt"
 
+    log_writter "-d" "checking plugins completed~" "plugins" 
     echo "DEBUG: checking complete ~"
 
     # Plugins are missing
     if [[ ${#missing_plugins[@]} -gt 0 ]] 
     then
         {
+        log_writter "-e" "some pluins are missing" "plugins"
+
         echo "ERROR: these pluins are not installed. : ${missing_plugins[*]}"
         echo "Please run this run below command to install"
         echo "brew install ${missing_plugins[*]}"
@@ -40,7 +45,7 @@ function check_plugins () {
     fi
 
     # All plugins are installed
-    echo "INFO: PASS!! All plugins are available in the plugins list"
+    log_writter "-i" "PASS!! All plugins are available now!"  "plugins"
     return 1
 }
 

@@ -4,13 +4,14 @@
 #===================================================================================
 # Keep at the top of this file.
 # shellcheck source=/dev/null
-echo "INFO: DOT IS RUNNING NOW~~"
+log_writter "-i"  "DOT LIBRARY IS RUNNING NOW~~" "lib"
 
 if [ -f "${CORE}" ]
 then
-    echo "DEBUG: CORE is found"
+    log_writter "-d" "CORE is found" "lib"
     # shellcheck source=/dev/null
     source "${CORE}"
 else 
-    echo "FETAL: CORE is not found in path" >> "$ERRLOG"
+    log_writter "-f" "CORE is not found in path" "lib"
+    log_writter "-f" "CORE is not found in path" "lib" >> "$ERRLOG"
 fi

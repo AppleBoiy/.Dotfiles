@@ -3,7 +3,7 @@
 #===================================================================================
 # Keep at the top of this file.
 # shellcheck source=/dev/null
-echo "INFO: SOURCE is running now~"
+log_writter "-i" "CORE LIBRARY IS RUNNING.."  "CORE"
 #===================================================================================
 
 
@@ -26,3 +26,6 @@ check_plugins
 
 # ALIAS COMMAND
 source "$ISRC/command/init.sh"
+
+
+log_writter "-i" "CORE IS RUN COMPLETED.." "CORE"
