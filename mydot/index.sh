@@ -11,13 +11,13 @@ echo "PATH is running now~"
 #===================================================================================
 
 # Path to dotfiles directory
-export DOTS="../$PWD"
+export DOTS="$HOME/.dotfiles/mydot"
 
 # CONTROLLER LIBRARY
-export CONTROLLER="$PWD/controller"
+export CONTROLLER="$DOTS/controller"
 
 # Path to dotfiles library directory
-export LIB="$PWD/lib"
+export LIB="$DOTS/lib"
 
 # Path to my custom dotfiles library source code
 export ISRC="$LIB/src"

@@ -23,7 +23,7 @@ function write_task() {
 
     width=108
     printf "%$width.${width}s" "$div"
-    printf "\n%-7s | %-17s | %-65s | %10s\n" "STATUS" "TIME" "INFO" "MODULE"
+    printf "\n%-7s | %-9s %7s | %-65s | %10s\n" "STATUS" "TIME" "NANO" "DETAIL" "MODULE"
     printf "%$width.${width}s\n" "$div"
 
     start=$(date +%s)
@@ -56,7 +56,6 @@ function err_task() {
     if [[ -n $(cat "$ERRLOG") ]]; then 
     echo "------------------------------------------------------------------------------------------------------------" 
     fi
-   
 
 }
 

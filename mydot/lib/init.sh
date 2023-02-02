@@ -15,3 +15,9 @@ else
     log_writter "-f" "CORE is not found in path" "lib"
     log_writter "-f" "CORE is not found in path" "lib" >> "$ERRLOG"
 fi
+
+# Destroy the exported objects 
+# Keep this line in the bottom of the file
+source "$MYDOT/destructor.sh"
+wait $!
+#=====================================================================================
